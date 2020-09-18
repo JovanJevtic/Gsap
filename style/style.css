@@ -198,4 +198,16 @@ section.image {
           transform: translateY(100%);
   display: inline-block;
 }
+
+.span-landing:after {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #e79613;
+  z-index: 1;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
 /*# sourceMappingURL=style.css.map */
