@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'DM Mono', monospace;
+}
+
+.grid-container {
+  height: 100vh;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.2fr 1.5fr;
+      grid-template-columns: 1fr 1.2fr 1.5fr;
+  -ms-grid-rows: 1fr 4fr 2.2fr 1.5fr;
+      grid-template-rows: 1fr 4fr 2.2fr 1.5fr;
+      grid-template-areas: "main main header" "main main image" "block1 block2 image" "footer footer image";
+}
+
+main {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: main;
+  background: #e79613;
+}
+
+main .main-header {
+  height: 100px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .main-header .logo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 26px;
+  margin-left: 6em;
+}
+
+main .main-content {
+  width: 80%;
+  margin-left: 10em;
+  height: 400px;
+}
+
+main .main-content h1 {
+  font-size: 38px;
+  margin-top: 70px;
+  font-weight: bold;
+}
+
+main .main-content .subheading {
+  margin-top: 40px;
+  max-width: 600px;
+  line-height: 30px;
+}
+
+main .main-content .landing-cta {
+  text-decoration: none;
+  color: #ededeb;
+  font-size: 30px;
+  margin-top: 50px;
+  margin-left: 0px;
+  position: absolute;
+  background: #202020;
+  -webkit-text-decoration: underline #aa07a2;
+          text-decoration: underline #aa07a2;
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: header;
+  background: #aa07a2;
+  background: #fafafa;
+}
+
+section.block1 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: block1;
+  background: #860f95;
+}
+
+section.block2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: block2;
+  background: #aa07a2;
+  background: #faffaf;
+}
+
+footer {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: footer;
+  background: #202020;
+}
+
+section.image {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  grid-area: image;
+  background: url("../assets/candy.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  pointer-events: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cover .cover-bar {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+  background: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cover .cover-bar .cover-bar-border {
+  height: 90%;
+  width: 100%;
+  border-right: 1px solid #3d3d3d;
+}
+/*# sourceMappingURL=style.css.map */

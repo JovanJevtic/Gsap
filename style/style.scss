@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Mono', monospace;
+}
+
+.grid-container {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1.5fr;
+    grid-template-rows: 1fr 4fr 2.2fr 1.5fr;
+    grid-template-areas: 
+        "main main header"
+        "main main image"
+        "block1 block2 image"
+        "footer footer image"
+    ;
+}
+
+main {
+    grid-area: main;
+    background: rgb(231, 150, 19);
+
+    .main-header {
+        height: 100px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 26px;
+            margin-left: 6em;
+        }
+    }
+
+    .main-content {
+        width: 80%;
+        margin-left: 10em;
+        height: 400px;
+
+        h1 {
+            //font-family: 'Poppins', sans-serif;
+            font-size: 38px;
+            margin-top: 70px;
+            font-weight: bold;
+        }
+
+        .subheading {
+            margin-top: 40px;
+            max-width: 600px;
+            line-height: 30px;
+        }
+
+        .landing-cta {
+            text-decoration: none;
+            color: #ededeb;
+            font-size: 30px;
+            margin-top: 50px;
+            margin-left: 0px;
+            position: absolute;
+            background:#202020;
+            text-decoration: underline  rgb(170, 7, 162);
+        }
+    }
+}
+
+header {
+    grid-area: header;
+    background: rgb(170, 7, 162);
+    background: #fafafa;
+}
+
+section.block1 {
+    grid-area: block1;
+    background: rgb(134, 15, 149);
+}
+
+section.block2 {
+    grid-area: block2;
+    background: rgb(170, 7, 162);
+    background: #faffaf;
+}
+
+footer {
+    grid-area: footer;
+    background: #202020;
+}
+
+section.image {
+    grid-area: image;
+    background: url('../assets/candy.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    pointer-events: none;
+    display: flex;
+
+    .cover-bar {
+        flex: 1;
+        height: 100%;
+        background: #000;
+        display: flex;
+        align-items: center;
+
+        .cover-bar-border {
+            height: 90%;
+            width: 100%;
+            border-right: 1px solid rgb(61, 61, 61);
+        }
+    }
+}
