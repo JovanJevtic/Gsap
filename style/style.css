@@ -149,4 +149,53 @@ section.image {
   width: 100%;
   border-right: 1px solid #3d3d3d;
 }
+
+.opening-scene {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  pointer-events: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #000;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.opening-scene .text-wrapp {
+  height: 50%;
+  width: 50%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.opening-scene .text-wrapp h1 {
+  background: black;
+  overflow: hidden;
+  font-size: 100px;
+  font-weight: bold;
+}
+
+.opening-scene .text-wrapp h1 span {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  display: inline-block;
+}
 /*# sourceMappingURL=style.css.map */
